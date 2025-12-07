@@ -1,12 +1,13 @@
-# Netlify build configuration: build the Vite app inside the `shilpa-jewellery` folder
+# Netlify build configuration: build the Vite app located in the `shilpa-jewellery` folder
+# Use `base` to switch Netlify's working directory to the app folder (case-sensitive)
 [build]
-  # Install & build from the app folder so dependencies and scripts there are used
-  command = "cd shilpa-jewellery && npm ci && npm run build"
-  # Publish the dist output generated inside the app folder
-  publish = "shilpa-jewellery/dist"
+  base = "shilpa-jewellery"
+  # Install dependencies and run the app's build script inside the base folder
+  command = "npm ci && npm run build"
+  # Publish the output directory produced by the app's build (relative to the base)
+  publish = "dist"
 
 [build.environment]
-  # Optionally pin a Node version (Netlify supports v18, v20, v22). Adjust if needed.
   NODE_VERSION = "22"
 
 [context.production.environment]
