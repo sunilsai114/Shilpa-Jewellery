@@ -1,23 +1,28 @@
-import Navbar from './components/Navbar.tsx';
-import Hero from './components/Hero.tsx';
-import About from './components/About.tsx';
-import Collections from './components/Collections.tsx';
-import CulturalHighlights from './components/CulturalHighlights.tsx';
-import Testimonials from './components/Testimonials.tsx';
-import Contact from './components/Contact.tsx';
-import Footer from './components/Footer.tsx';
+import { Navbar } from './components/Navbar';
+import { Hero } from './components/Hero';
+import { About } from './components/About';
+import { Collections } from './components/Collections';
+import { CulturalHighlights } from './components/CulturalHighlights';
+import { Testimonials } from './components/Testimonials';
+import { Contact } from './components/Contact';
+import { Footer } from './components/Footer';
 
 function App() {
   return (
     <>
       <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Collections />
-        <CulturalHighlights />
-        <Testimonials />
-        <Contact />
+      <main id="main-content">
+        <div className="container">
+          <Hero />
+          <div className="cultural-divider" />
+          <About />
+          <Collections />
+          <div className="cultural-divider" />
+          <CulturalHighlights />
+          <Testimonials />
+          <div className="cultural-divider" />
+          <Contact />
+        </div>
       </main>
       <Footer />
     </>
@@ -25,4 +30,3 @@ function App() {
 }
 
 export default App;
-// End of shilpa-jewellery/src/App.tsx

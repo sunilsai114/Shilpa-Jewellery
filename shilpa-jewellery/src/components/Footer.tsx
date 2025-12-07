@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaInstagram, FaWhatsapp, FaFacebook } from 'react-icons/fa';
 
-const Footer: React.FC = () => {
+export const Footer: React.FC = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
@@ -24,9 +24,9 @@ const Footer: React.FC = () => {
         <div className="footer-section">
           <h4>Connect with Us</h4>
           <div className="social-icons">
-            <a href="https://www.instagram.com/srivallisilver" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+            <a href="https://www.instagram.com/shilpajewellery" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
             <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer"><FaWhatsapp /></a>
-            <a href="https://www.facebook.com/srivallisilver" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
+            <a href="https://www.facebook.com/shilpajewellery" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
           </div>
           <p style={{marginTop: '15px', color: '#FEEEDD'}}>
             #12-34-56, Main Road,<br/>
@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
       </div>
 
       <div className="footer-bottom">
-        &copy; {new Date().getFullYear()} Srivalli Silver Arts. Handcrafted silver ornaments from Andhra Pradesh.
+        &copy; {new Date().getFullYear()} Shilpa Jewellery. Handcrafted silver ornaments from Andhra Pradesh.
       </div>
     </footer>
   );

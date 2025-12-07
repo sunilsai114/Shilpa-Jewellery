@@ -1,5 +1,20 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 
+function renderBoldMarkdown(text: string) {
+    const parts: React.ReactNode[] = [];
+    const re = /\*\*(.+?)\*\*/g;
+    let lastIndex = 0;
+    let m: RegExpExecArray | null;
+    let i = 0;
+    while ((m = re.exec(text)) !== null) {
+        if (m.index > lastIndex) parts.push(text.slice(lastIndex, m.index));
+        parts.push(<strong key={`b-${i++}`}>{m[1]}</strong>);
+        lastIndex = m.index + m[0].length;
+    }
+    if (lastIndex < text.length) parts.push(text.slice(lastIndex));
+    return parts;
+}
+
 // 💡 Interface for the form state
 interface FormData {
     name: string;
@@ -7,7 +22,7 @@ interface FormData {
     message: string;
 }
 
-const Contact: React.FC = () => {
+export const Contact: React.FC = () => {
     // 💡 Initialize state with the defined interface
     const [formData, setFormData] = useState<FormData>({ name: '', phone: '', message: '' });
     const [status, setStatus] = useState<string>('');
@@ -40,20 +55,24 @@ const Contact: React.FC = () => {
         {/* Contact Info content remains the same */}
         <div className="contact-info">
             <h3>Store Details</h3>
-            <p><strong>Address:</strong><br/>
-                #12-34-56, Main Road,<br/>
-                Near Clock Tower, **Vijayawada, Andhra Pradesh, 520002**
-            </p>
+                        {
+                            /* Small helper to render **bold** segments */
+                        }
+                        <p>
+                            <strong>Address:</strong><br/>
+                            #12-34-56, Main Road,<br/>
+                            {renderBoldMarkdown('Near Clock Tower, **Vijayawada, Andhra Pradesh, 520002**')}
+                        </p>
 
-            <p><strong>Business Hours:</strong><br/>
-                Mon - Sat: 10:00 AM - 8:00 PM<br/>
-                Sunday: Closed
-            </p>
-            
-            <p>
-                **Call:** +91 98765 43210<br/>
-                **Email:** info@srivallisilverarts.in
-            </p>
+                        <p><strong>Business Hours:</strong><br/>
+                                Mon - Sat: 10:00 AM - 8:00 PM<br/>
+                                Sunday: Closed
+                        </p>
+
+                        <p>
+                            {renderBoldMarkdown('**Call:** +91 98765 43210')}<br/>
+                            {renderBoldMarkdown('**Email:** info@shilpajewellery.in')}
+                        </p>
             
             <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
                 WhatsApp Us Now
