@@ -1,0 +1,13 @@
+# Netlify build configuration: build the Vite app inside the `shilpa-jewellery` folder
+[build]
+  # Install & build from the app folder so dependencies and scripts there are used
+  command = "cd shilpa-jewellery && npm ci && npm run build"
+  # Publish the dist output generated inside the app folder
+  publish = "shilpa-jewellery/dist"
+
+[build.environment]
+  # Optionally pin a Node version (Netlify supports v18, v20, v22). Adjust if needed.
+  NODE_VERSION = "22"
+
+[context.production.environment]
+  NODE_OPTIONS = "--max_old_space_size=4096"
