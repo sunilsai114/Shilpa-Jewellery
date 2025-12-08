@@ -10,7 +10,7 @@ const productsData: Product[] = [
     name: 'Temple Nakshi Necklace',
     description: 'Intricately carved deity design with pure silver.',
     price: 'Request Price',
-    image: 'https://source.unsplash.com/800x600/?silver-necklace,jewelry'
+    image: '/images/temple-nakshi.jpg'
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const productsData: Product[] = [
     name: 'Hyderabad Kara Bangle',
     description: 'Traditional thick Kara bangle set for festive wear.',
     price: '₹ 15,000',
-    image: 'https://source.unsplash.com/800x600/?bangle,jewelry'
+    image: '/images/hyderabad-kara.jpg'
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const productsData: Product[] = [
     name: 'Purity Promise Ring',
     description: 'Simple, elegant design for daily use.',
     price: '₹ 2,500',
-    image: 'https://source.unsplash.com/800x600/?silver-ring,jewelry'
+    image: '/images/purity-promise-ring.jpg'
   },
   {
     id: 4,
@@ -34,7 +34,7 @@ const productsData: Product[] = [
     name: 'Andhra Paayal (Pair)',
     description: 'Traditional, melodic anklets, a symbol of heritage.',
     price: '₹ 4,000',
-    image: 'https://source.unsplash.com/800x600/?anklet,jewelry'
+    image: '/images/andhra-paayal.jpg'
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ const productsData: Product[] = [
     name: 'Silver Kalash & Spoon',
     description: 'Essential items for daily pooja/ritual use.',
     price: 'Request Price',
-    image: 'https://source.unsplash.com/800x600/?pooja,silver'
+    image: '/images/silver-kalash-spoon.jpg'
   },
   {
     id: 6,
@@ -50,7 +50,7 @@ const productsData: Product[] = [
     name: 'Miniature Tirupati Balaji',
     description: 'Perfect gift article, high-purity silver.',
     price: '₹ 8,000',
-    image: 'https://source.unsplash.com/800x600/?silver-figurine,gift'
+    image: '/images/miniature-tirupati.jpg'
   },
   {
     id: 7,
@@ -58,7 +58,7 @@ const productsData: Product[] = [
     name: 'Kasulaperu Replica',
     description: 'A timeless Andhra favorite, coin design.',
     price: 'Request Price',
-    image: 'https://source.unsplash.com/800x600/?coin-necklace,jewelry'
+    image: '/images/kasulaperu-replica.jpg'
   },
   {
     id: 8,
@@ -66,7 +66,7 @@ const productsData: Product[] = [
     name: 'Floral Engraved Kadas',
     description: 'Set of two broad kadas with floral engravings.',
     price: '₹ 18,500',
-    image: 'https://source.unsplash.com/800x600/?floral-bangle,jewelry'
+    image: '/images/floral-kadas.jpg'
   },
 ];
 

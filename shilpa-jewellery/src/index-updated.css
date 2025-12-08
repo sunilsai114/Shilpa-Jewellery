@@ -84,7 +84,7 @@ button:focus-visible {
   }
 }
 
-/* Shimmer animation for premium glass shine effect */\n@keyframes shimmer {\n  0% { transform: translateX(120%); opacity: 0; }\n  20% { opacity: 0.9; }\n  50% { transform: translateX(0%); opacity: 1; }\n  100% { transform: translateX(-120%); opacity: 0; }\n}\n
+/* Shimmer animation for premium glass shine effect */
 @keyframes shimmer {
   0% {
     background-position: -1000px 0;
@@ -94,7 +94,6 @@ button:focus-visible {
   }
 }
 
-/* Navbar */
 /* Layout & component styles */
 .site-container { padding: 0 24px; }
 .container { max-width: 1100px; margin: 0 auto; padding: 24px 0; text-align: center; }
@@ -126,6 +125,19 @@ button:focus-visible {
   text-align: center;
   color: var(--maroon);
   letter-spacing: 0.5px;
+  /* Shimmer effect: light reflection moving right to left */
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    transparent 20%,
+    rgba(255, 255, 255, 0.8) 50%,
+    transparent 80%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmer 6s infinite;
 }
 
 /* Mobile menu */
@@ -334,7 +346,7 @@ a:focus, button:focus { outline: 3px solid rgba(160,54,76,0.12); outline-offset:
 }
 
 /* Decorative cultural divider inspired by temple engraving */
-.cultural-divider { height: 8px; background: repeating-linear-gradient(90deg, rgba(160,54,76,0.08) 0 6px, rgba(59,112,73,0.04) 6px 12px); border-radius: 4px; margin: 18px 0; }\n\n/* Logo shimmer overlay (applies to .navbar-logo) */\n.navbar-logo { position: relative; overflow: hidden; color: var(--maroon); }\n.navbar-logo::after { content: ; position: absolute; top: -10%; left: 0; width: 40%; height: 120%; background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0) 100%); transform: translateX(120%); filter: blur(6px); opacity: 0; pointer-events: none; animation: shimmer 6s ease-in-out infinite; mix-blend-mode: screen; }
+.cultural-divider { height: 8px; background: repeating-linear-gradient(90deg, rgba(160,54,76,0.08) 0 6px, rgba(59,112,73,0.04) 6px 12px); border-radius: 4px; margin: 18px 0; }
 
 @media (max-width: 900px) {
   .hero h1 { font-size: 2.2rem; }
@@ -351,7 +363,3 @@ a:focus, button:focus { outline: 3px solid rgba(160,54,76,0.12); outline-offset:
 @media (max-width: 420px) {
   .product-grid { grid-template-columns: 1fr; }
 }
-
-
-
-
